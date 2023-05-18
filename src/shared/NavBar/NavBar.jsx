@@ -15,12 +15,27 @@ const NavBar = () => {
    }
 
    const navItems = <>
-      <NavLink to="/" className='mr-5' style={({ isActive, isPending }) => {
-         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#0081a7", };
+      <NavLink to="/" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
+         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
       }}> Home </NavLink>
-      <NavLink to="/blog" className='mr-5' style={({ isActive, isPending }) => {
-         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#0081a7", };
-      }}> Blog </NavLink>
+      
+      <NavLink className='text-[18px] mr-5' style={({ isActive, isPending }) => {
+         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
+      }}>  All Toys </NavLink>
+
+      {users && <>
+         <NavLink className='text-[18px] mr-5' style={({ isActive, isPending }) => {
+            return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
+         }}> Add A Toy </NavLink>
+
+         <NavLink className='text-[18px] mr-5' style={({ isActive, isPending }) => {
+            return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
+         }}> My Toys </NavLink>
+      </>}
+
+      <NavLink to="/blog" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
+         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
+      }}> Blogs </NavLink>
    </>
 
    return (
@@ -36,7 +51,7 @@ const NavBar = () => {
                   </ul>
                </div>
                <Link to="/"><img src={logo} alt="Logo" className="w-16" /></Link>
-               <a className="text-2xl font-bold ml-2">Magical Toy</a>
+               <Link to="/" className="text-2xl font-bold ml-2">Magical Toy</Link>
             </div>
 
             <div className="navbar-center hidden lg:flex">
