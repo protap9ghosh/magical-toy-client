@@ -63,6 +63,7 @@ const Login = () => {
 
                            <small className='text-center mt-2'>Don&lsquo;t have account? <Link to="/register" className='text-amber-600 font-semibold'>Register</Link></small>
                         </div>
+                        <p className='text-red-600 font-semibold text-center mt-3'>{error}</p>
                      </form>
                   </div>
                </div>

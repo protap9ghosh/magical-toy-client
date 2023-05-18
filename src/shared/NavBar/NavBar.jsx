@@ -1,7 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images.png"
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const NavBar = () => {
+   const { users, userLogOut } = useContext(AuthContext)
+
+   const handleLogOut = () => {
+      userLogOut()
+         .then()
+         .catch((error) => {
+            console.log(error)
+         });
+   }
+
    const navItems = <>
       <NavLink to="/" className='mr-5' style={({ isActive, isPending }) => {
          return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#0081a7", };
@@ -34,15 +46,19 @@ const NavBar = () => {
             </div>
 
             <div className="navbar-end">
-               <div className="avatar tooltip tooltip-left mr-4" data-tip="hello">
+               {users &&
+                  <div className="avatar tooltip tooltip-left mr-4" data-tip={users?.displayName}>
                   <div className="w-11 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 ml-2">
-                        <img src="https://rb.gy/dd1d9"/>
+                        <img src={users?.photoURL} />
                      </div>
-               </div>
+               </div>}
 
-               <Link to="/login">
-                  <button className='btn'>Log In</button>
-               </Link>
+               {users ?
+                  <button onClick={handleLogOut} className='btn bg-gradient-to-r from-emerald-400 to-purple-400 hover:from-pink-500 hover:to-yellow-500 border-none '>Log Out</button> :
+                  <Link to="/login">
+                     <button className='btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 border-none'>Log In</button>
+                  </Link>
+               }
             </div>
          </div>
       </div>

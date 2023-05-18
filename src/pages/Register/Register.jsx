@@ -84,6 +84,9 @@ const Register = () => {
 
                            <small className='text-center mt-2'>Already have an account? <Link to="/login" className='text-amber-600 font-semibold'>Login</Link></small>
                         </div>
+                        <label className="label text-red-600">
+                           <small className='text-[16px] mx-auto'>{error}</small>
+                        </label>
                      </form>
                   </div>
                </div>
