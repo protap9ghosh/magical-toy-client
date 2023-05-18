@@ -24,7 +24,7 @@ const NavBar = () => {
       }}>  All Toys </NavLink>
 
       {users && <>
-         <NavLink className='text-[18px] mr-5' style={({ isActive, isPending }) => {
+         <NavLink to="/add-toy" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
             return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
          }}> Add A Toy </NavLink>
 

@@ -6,6 +6,7 @@ import Register from "../pages/Register/Register";
 import NotFound from "../pages/NotFound/NotFound";
 import Blog from "../pages/Blog/Blog";
 import LoginLayout from "../Layouts/LoginLayout";
+import AddAToy from "../pages/AddAToy/AddAToy";
 
 const router = createBrowserRouter([
    {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             path: "register",
             element: <Register></Register>
          },
+         {
+            path: "add-toy",
+            element: <AddAToy></AddAToy>
+         }
       ],
    },
    {
