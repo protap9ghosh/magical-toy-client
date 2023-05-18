@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaGoogle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
    return (
@@ -24,7 +26,10 @@ const Login = () => {
                         </label>
                      </div>
                      <div className="form-control mt-6">
-                        <button className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-md border-none">Login</button>
+                        <button className="btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-md border-none text-[16px] capitalize">Login</button>
+                        <button className="btn btn-outline  btn-accent rounded-md text-[16px] capitalize mt-5"><FaGoogle className='mr-2' /> Sign in with Google</button>
+
+                        <small className='text-center mt-2'>Don&lsquo;t have account? <Link to="/register" className='text-amber-600 font-semibold'>Register</Link></small>
                      </div>
                   </div>
                </div>
