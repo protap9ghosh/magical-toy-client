@@ -11,9 +11,9 @@ const PrivateRoute = ({ children }) => {
       return (
          <div className='min-h-screen bg-slate-200'>
             <Circles
-               height="80"
-               width="80"
-               color="#4fa94d"
+               height="90"
+               width="100%"
+               color="#00b4d8"
                ariaLabel="circles-loading"
                wrapperStyle={{}}
                wrapperClass=""
