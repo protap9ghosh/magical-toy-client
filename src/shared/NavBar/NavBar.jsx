@@ -16,25 +16,25 @@ const NavBar = () => {
 
    const navItems = <>
       <NavLink to="/" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
-         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
+         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#006d77", };
       }}> Home </NavLink>
       
       <NavLink to="/all-toy" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
-         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
+         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#006d77", };
       }}>  All Toys </NavLink>
 
       {users && <>
          <NavLink to="/add-toy" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
-            return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
+            return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#006d77", };
          }}> Add A Toy </NavLink>
 
          <NavLink to="/my-toys" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
-            return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
+            return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#006d77", };
          }}> My Toys </NavLink>
       </>}
 
       <NavLink to="/blog" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
-         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
+         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#006d77", };
       }}> Blogs </NavLink>
    </>
 
