@@ -21,7 +21,7 @@ const AllToys = () => {
          <h2 className='text-5xl text-stone-700 text-center font-bold'>All Toys</h2>
          <p className='w-1/2 mx-auto my-8 text-slate-500 text-[18px] text-center font-semibold'>Unleash your creativity and bond with furry friends through Toy Time Fun a collection of animal toys designed to inspire laughter and endless fun</p>
          <div>
-            <div className="overflow-x-auto w-full">
+            <div className="container mx-auto overflow-x-auto w-full">
                <table className="table w-full">
                   {/* head */}
                   <thead>

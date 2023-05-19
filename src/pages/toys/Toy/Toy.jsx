@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const toy = ({ toy }) => {
-   const {sellerName, sellerEmail, toyName, photo, category, rating, price, quantity, details } = toy;
+   const {_id, sellerName, sellerEmail, toyName, photo, category, rating, price, quantity, details } = toy;
 
    return (
       <tr>
@@ -10,7 +10,7 @@ const toy = ({ toy }) => {
             <div className="flex items-center space-x-3">
                <div className="avatar">
                   <div className="mask mask-hexagon w-28 h-28">
-                     <img src={photo} alt="Photo"/>
+                     {photo && <img src={photo} alt="Photo"/>}
                   </div>
                </div>
             </div>
@@ -23,7 +23,7 @@ const toy = ({ toy }) => {
          <td>{quantity}</td>
          <td>${price}</td>
          <th>
-            <Link to="/toy-details" className="btn btn-outline btn-info btn-sm">View details</Link>
+            <Link to={`/toy/${_id}`} className="btn btn-outline btn-info btn-sm">View details</Link>
          </th>
       </tr>
    );
