@@ -23,7 +23,7 @@ const toy = ({ toy }) => {
          <td>{quantity}</td>
          <td>${price}</td>
          <th>
-            <Link to={`/toy/${_id}`} className="btn btn-outline btn-info btn-sm">View details</Link>
+            <Link to={`/toy-details/${_id}`} className="btn btn-outline btn-info btn-sm">Toy details</Link>
          </th>
       </tr>
    );

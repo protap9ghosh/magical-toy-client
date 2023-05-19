@@ -86,9 +86,9 @@ const AddAToy = () => {
                <div className="md:flex justify-center gap-5 mb-2">
                   <div className="form-control md:w-1/2">
                      <label className="label">
-                        <span className="label-text text-[16px] font-semibold">Sub category</span>
+                        <span className="label-text text-[16px] font-semibold">Sub-category</span>
                      </label>
-                     <input type="text" name="category" placeholder="Category" required className="input input-bordered w-full" />
+                     <input type="text" name="category" placeholder="Teddy Bear" required className="input input-bordered w-full" />
                   </div>
 
                   <div className="form-control md:w-1/2">
@@ -104,7 +104,7 @@ const AddAToy = () => {
                      <label className="label">
                         <span className="label-text text-[16px] font-semibold">Price</span>
                      </label>
-                     <input type="number" name="price" placeholder="$" required className="input input-bordered w-full" />
+                     <input type="number" name="price" placeholder="$0.00" required className="input input-bordered w-full" />
                   </div>
 
                   <div className="form-control md:w-1/2">
