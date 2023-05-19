@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const toy = ({ toy }) => {
    const {sellerName, sellerEmail, toyName, photo, category, rating, price, quantity, details } = toy;
@@ -9,7 +10,7 @@ const toy = ({ toy }) => {
             <div className="flex items-center space-x-3">
                <div className="avatar">
                   <div className="mask mask-hexagon w-28 h-28">
-                     <img src={photo} alt="Photo" />
+                     <img src={photo} alt="Photo"/>
                   </div>
                </div>
             </div>
@@ -19,9 +20,10 @@ const toy = ({ toy }) => {
          </td>
          <td>{sellerName}</td>
          <td>{category}</td>
+         <td>{quantity}</td>
          <td>${price}</td>
          <th>
-            <button className="btn btn-ghost btn-xs">details</button>
+            <Link to="/toy-details" className="btn btn-outline btn-info btn-sm">View details</Link>
          </th>
       </tr>
    );
