@@ -19,7 +19,7 @@ const NavBar = () => {
          return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
       }}> Home </NavLink>
       
-      <NavLink className='text-[18px] mr-5' style={({ isActive, isPending }) => {
+      <NavLink to="/all-toy" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
          return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
       }}>  All Toys </NavLink>
 
@@ -28,7 +28,7 @@ const NavBar = () => {
             return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
          }}> Add A Toy </NavLink>
 
-         <NavLink className='text-[18px] mr-5' style={({ isActive, isPending }) => {
+         <NavLink to="/my-toys" className='text-[18px] mr-5' style={({ isActive, isPending }) => {
             return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#bc6c25", };
          }}> My Toys </NavLink>
       </>}
