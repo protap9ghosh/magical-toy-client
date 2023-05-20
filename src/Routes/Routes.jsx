@@ -52,7 +52,7 @@ const router = createBrowserRouter([
          {
             path: "/all-toy",
             element: <AllToys></AllToys>,
-            loader: () => fetch('http://localhost:5000/toy'),
+            loader: () => fetch('https://magical-toy-server-protap9ghosh.vercel.app/toy'),
          },
          {
             path: "/my-toys",
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
          {
             path: "/toy-details/:id",
             element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/toy/${params.id}`),
+            loader: ({ params }) => fetch(`https://magical-toy-server-protap9ghosh.vercel.app/toy/${params.id}`),
          }
       ]
    },

@@ -7,7 +7,7 @@ const AllToys = () => {
    useTitle('All Toys');
    const AllToys = useLoaderData();
    const [toys, setToys] = useState([]);
-   const url = 'http://localhost:5000/toy';
+   const url = 'https://magical-toy-server-protap9ghosh.vercel.app/toy';
    useEffect(() => {
       fetch(url)
          .then((res) => res.json())
