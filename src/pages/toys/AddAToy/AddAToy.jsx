@@ -24,7 +24,7 @@ const AddAToy = () => {
       console.log(newToy);
 
       // send toy data to the server
-      fetch('https://magical-toy-server-protap9ghosh.vercel.app/toy', {
+      fetch('http://localhost:5000/toy', {
          method: 'POST',
          headers: {
             'content-type': 'application/json',

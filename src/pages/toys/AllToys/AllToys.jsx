@@ -7,7 +7,7 @@ const AllToys = () => {
    useTitle('All Toys');
    const AllToys = useLoaderData();
    const [toys, setToys] = useState([]);
-   const url = 'https://magical-toy-server-protap9ghosh.vercel.app/toy';
+   const url = 'http://localhost:5000/toy';
    useEffect(() => {
       fetch(url)
          .then((res) => res.json())
@@ -19,6 +19,8 @@ const AllToys = () => {
    return (
       <div className='bg-gray-50 py-10'>
          <h2 className='text-4xl text-stone-700 text-center font-bold mb-6'>All Toys Items</h2>
+
+        
 
          <div className="form-control mb-8">
             <div className="input-group w-2/6 mx-auto">

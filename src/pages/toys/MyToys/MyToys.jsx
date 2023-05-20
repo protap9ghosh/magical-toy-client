@@ -1,25 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
-import useTitle from '../../../hooks/useTitle';
-import { AuthContext } from '../../../providers/AuthProvider';
+import { useLoaderData } from "react-router-dom";
 
 const MyToys = () => {
-   useTitle('My Toys');
-   // const { users } = useContext(AuthContext);
-   // const [toys, setToys] = useState([]);
-   // console.log(users.email);
-
-   // const url = `https://magical-toy-server-protap9ghosh.vercel.app/toy?email=${users.email}`;
-   // useEffect(() => {
-   //    fetch(url)
-   //       .then((res) => res.json())
-   //       .then((data) => {
-   //          console.log(data);
-   //       })
-   // }, [])
+   const toys = useLoaderData();
+   const { sellerName, sellerEmail, toyName, photo, rating, price, quantity, details } = toys;
 
    return (
       <div>
-         {/* <h2>{toys.length}</h2> */}
+         <h2>Toy Name {toyName}</h2>
+         <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur atque quisquam eius. Necessitatibus, iusto temporibus! Velit quae dolor aperiam similique iste, perspiciatis amet delectus, ipsam vel, a quisquam enim consequatur!</h3>
       </div>
    );
 };

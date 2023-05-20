@@ -52,16 +52,17 @@ const router = createBrowserRouter([
          {
             path: "/all-toy",
             element: <AllToys></AllToys>,
-            loader: () => fetch('https://magical-toy-server-protap9ghosh.vercel.app/toy'),
+            loader: () => fetch('http://localhost:5000/toy'),
          },
          {
-            path: "/my-toys",
+            path: "/my-toys/:email",
             element: <MyToys></MyToys>,
+            loader: ({ params }) => fetch(`http://localhost:5000/myToys/${params.email}`),
          },
          {
             path: "/toy-details/:id",
             element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-            loader: ({ params }) => fetch(`https://magical-toy-server-protap9ghosh.vercel.app/toy/${params.id}`),
+            loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`),
          }
       ]
    },
