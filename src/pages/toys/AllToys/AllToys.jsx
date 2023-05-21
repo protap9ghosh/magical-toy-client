@@ -5,7 +5,6 @@ import Toy from '../toy/toy';
 
 const AllToys = () => {
    useTitle('All Toys');
-   const AllToys = useLoaderData();
    const [toys, setToys] = useState([]);
    const url = 'http://localhost:5000/toy';
    useEffect(() => {
