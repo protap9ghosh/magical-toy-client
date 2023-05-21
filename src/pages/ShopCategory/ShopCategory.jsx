@@ -21,7 +21,7 @@ const ShopCategory = () => {
    }
 
    return (
-      <div>
+      <div className='mt-8 bg-sky-50'>
          <Tabs className="text-center">
             <TabList>
                <Tab>Animal Toys</Tab>

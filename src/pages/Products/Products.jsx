@@ -3,14 +3,15 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Products = () => {
    return (
-      <div>
+      <div className='bg-slate-100 py-14'>
          <div>
-            <h6 className='font-medium mt-20 text-center'>What we offer for you</h6>
+            <h6 className='font-medium text-center'>What we offer for you</h6>
             <h1 className='text-6xl font-medium text-center mb-14'> <span className='text-orange-500'>New</span> Products</h1>
          </div>
          <div className='flex items-center justify-center container mx-auto'>
             <div className='grid gap-6 grid-cole-1 lg:grid-cols-2'>
-               <div className='rounded-xl shadow-2xl'>
+
+               <div className='rounded-xl shadow-xl bg-white'>
                   <div className='p-5 flex flex-col'>
                      <div className='rounded-xl overflow-hidden flex'>
                         <div className='w-[25%]'>
@@ -27,7 +28,8 @@ const Products = () => {
                      </div>
                   </div>
                </div>
-               <div className='rounded-xl shadow-2xl'>
+
+               <div className='rounded-xl shadow-xl bg-white'>
                   <div className='p-5 flex flex-col'>
                      <div className='rounded-xl overflow-hidden flex'>
                         <div className='w-[25%]'>
@@ -44,7 +46,8 @@ const Products = () => {
                      </div>
                   </div>
                </div>
-               <div className='rounded-xl shadow-2xl'>
+
+               <div className='rounded-xl shadow-xl bg-white'>
                   <div className='p-5 flex flex-col'>
                      <div className='rounded-xl overflow-hidden flex'>
                         <div className='w-[25%]'>
@@ -61,7 +64,8 @@ const Products = () => {
                      </div>
                   </div>
                </div>
-               <div className='rounded-xl shadow-2xl'>
+
+               <div className='rounded-xl shadow-xl bg-white'>
                   <div className='p-5 flex flex-col'>
                      <div className='rounded-xl overflow-hidden flex'>
                         <div className='w-[25%]'>
@@ -78,7 +82,8 @@ const Products = () => {
                      </div>
                   </div>
                </div>
-               <div className='rounded-xl shadow-2xl'>
+
+               <div className='rounded-xl shadow-xl bg-white'>
                   <div className='p-5 flex flex-col'>
                      <div className='rounded-xl overflow-hidden flex'>
                         <div className='w-[25%]'>
@@ -95,7 +100,8 @@ const Products = () => {
                      </div>
                   </div>
                </div>
-               <div className='rounded-xl shadow-2xl'>
+
+               <div className='rounded-xl shadow-xl bg-white'>
                   <div className='p-5 flex flex-col'>
                      <div className='rounded-xl overflow-hidden flex'>
                         <div className='w-[25%]'>
