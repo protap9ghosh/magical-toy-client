@@ -1,14 +1,13 @@
 import { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import ToyRow from "./ToyRow";
-import { Circles } from "react-loader-spinner";
+import useTitle from "../../../hooks/useTitle";
 
 const MyToys = () => {
-   // const toys = useLoaderData();
-   // const { sellerName, sellerEmail, toyName, photo, rating, price, quantity, details } = toys;
+   useTitle('My Toys')
    const { users } = useContext(AuthContext)
    const [toy, setToy] = useState([]);
+
    const url = `http://localhost:5000/myToys/${users.email}`;
    useEffect(() => {
       fetch(url)
@@ -50,9 +49,11 @@ const MyToys = () => {
 
                   <tbody>
                      {
-                        toy.map(toy => <ToyRow
-                           key={toy._id}
+                        toy.map(toyData => <ToyRow
+                           key={toyData._id}
+                           toyData={toyData}
                            toy={toy}
+                           setToy={setToy}
                         ></ToyRow>)
                      }
                   </tbody>

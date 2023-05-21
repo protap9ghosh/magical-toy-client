@@ -21,7 +21,7 @@ const AddAToy = () => {
       const details = form.details.value;
 
       const newToy = { sellerName, sellerEmail, toyName, photo, category, rating, price, quantity, details }
-      console.log(newToy);
+      // console.log(newToy);
 
       // send toy data to the server
       fetch('http://localhost:5000/toy', {
@@ -33,7 +33,7 @@ const AddAToy = () => {
       })
          .then((res) => res.json())
          .then((data) => {
-            console.log(data);
+            // console.log(data);
             if (data.insertedId) {
                Swal.fire({
                   title: 'Good Job',
