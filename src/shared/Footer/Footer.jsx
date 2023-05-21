@@ -5,7 +5,7 @@ const Footer = () => {
    return (
       <footer className="footer text-white p-20 bg-cyan-950">
          <div className='gap-3'>
-            <img className="h-20" src="/src/assets/images.png" alt="" />
+            <img className="h-20" src="https://i.ibb.co/WfGPGV9/images.png" alt="" />
             <h1 className="text-2xl font-bold">Magical Toy</h1>
 
             <p className="font-medium">Magical Industries Ltd.<br />Providing reliable tech since 1992</p>

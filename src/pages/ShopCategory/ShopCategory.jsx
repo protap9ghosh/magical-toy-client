@@ -9,7 +9,7 @@ const ShopCategory = () => {
    console.log(allToy);
 
    useEffect(() => {
-      fetch(`http://localhost:5000/subCategory/${activeTab}`)
+      fetch(`https://magical-toy-server-protap9ghosh.vercel.app/subCategory/${activeTab}`)
          .then(res => res.json())
          .then(data => {
             setAllToy(data);
@@ -58,7 +58,7 @@ const ShopCategory = () => {
                         }
                      </div>
                   </TabPanel>
-                  
+
                   <TabPanel>
                      <div className='md:flex gap-5 justify-center'>
                         {

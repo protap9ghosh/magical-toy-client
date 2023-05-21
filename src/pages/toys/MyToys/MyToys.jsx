@@ -8,7 +8,7 @@ const MyToys = () => {
    const { users } = useContext(AuthContext)
    const [toy, setToy] = useState([]);
 
-   const url = `http://localhost:5000/myToys/${users.email}`;
+   const url = `https://magical-toy-server-protap9ghosh.vercel.app/myToys/${users.email}`;
    useEffect(() => {
       fetch(url)
          .then((res) => res.json())
