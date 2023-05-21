@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaRegEdit, FaRegTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const ToyRow = ({ toy }) => {
@@ -13,8 +14,9 @@ const ToyRow = ({ toy }) => {
          <td>{category}</td>
          <td>{quantity}</td>
          <td>${price}</td>
-         <th>
-            <Link className="btn btn-outline btn-sm rounded-sm capitalize">Toy details</Link>
+         <th className='flex'>
+            <Link className="text-xl text-indigo-600 mr-4"><FaRegEdit/></Link>
+            <Link className="text-xl text-red-500"><FaRegTrashAlt /></Link>
          </th>
       </tr>
    );
