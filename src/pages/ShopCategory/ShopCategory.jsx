@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ShopCard from './ShopCard';
 
 const ShopCategory = () => {
+   const [allToy, setAllToy] = useState([]);
+   const [activeTab, setActiveTab] = useState('Cat');
+   console.log(allToy);
 
-   
+   useEffect(() => {
+      fetch(`http://localhost:5000/subCategory/${activeTab}`)
+         .then(res => res.json())
+         .then(data => {
+            setAllToy(data);
+         })
+   }, [activeTab])
+
+   const handleAddClick = (tabName) => {
+      setActiveTab(tabName)
+   }
+
    return (
       <div>
          <Tabs className="text-center">
@@ -15,35 +30,46 @@ const ShopCategory = () => {
             <TabPanel>
                <Tabs>
                   <TabList>
-                     <Tab>Teddy Bear</Tab>
-                     <Tab>Cat</Tab>
-                     <Tab>Horse</Tab>
+                     <Tab onClick={() => handleAddClick('Cat')}>Cat</Tab>
+                     <Tab onClick={() => handleAddClick('dog')}>Dog</Tab>
+                     <Tab onClick={() => handleAddClick('horse')}>Horse</Tab>
                   </TabList>
-                  
+
                   <TabPanel>
-                     <div className="card w-96 bg-base-100 shadow-xl">
-                        <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                        <div className="card-body">
-                           <h2 className="card-title">
-                              Shoes!
-                              <div className="badge badge-secondary">NEW</div>
-                           </h2>
-                           <p>If a dog chews shoes whose shoes does he choose?</p>
-                           <div className="card-actions justify-end">
-                              <div className="badge badge-outline">Fashion</div>
-                              <div className="badge badge-outline">Products</div>
-                           </div>
+                     <div>
+                        <div className='md:flex gap-5 justify-center'>
+                           {
+                              allToy.map(toy => <ShopCard
+                                 key={toy._id}
+                                 toy={toy}
+                              ></ShopCard>)
+                           }
                         </div>
                      </div>
                   </TabPanel>
 
                   <TabPanel>
-                     <h2>Any content 2</h2>
+                     <div className='md:flex gap-5 justify-center'>
+                        {
+                           allToy.map(toy => <ShopCard
+                              key={toy._id}
+                              toy={toy}
+                           ></ShopCard>)
+                        }
+                     </div>
+                  </TabPanel>
+                  
+                  <TabPanel>
+                     <div className='md:flex gap-5 justify-center'>
+                        {
+                           allToy.map(toy => <ShopCard
+                              key={toy._id}
+                              toy={toy}
+                           ></ShopCard>)
+                        }
+                     </div>
                   </TabPanel>
 
-                  <TabPanel>
-                     <h2>Any content 3</h2>
-                  </TabPanel>
                </Tabs>
             </TabPanel>
          </Tabs>

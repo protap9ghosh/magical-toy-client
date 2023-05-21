@@ -28,7 +28,7 @@ const MyToys = () => {
                   <option>Ascending</option>
                   <option>Descending</option>
                </select>
-               <button className="btn">Go</button>
+               <button className="btn capitalize text-[16px]">Search</button>
             </div>
          </div>
 

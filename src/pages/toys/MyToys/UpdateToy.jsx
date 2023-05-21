@@ -34,7 +34,7 @@ const UpdateToy = () => {
             console.log(data);
             if (data.modifiedCount > 0) {
                Swal.fire({
-                  title: 'Good Job',
+                  title: 'success',
                   text: 'Toy Updated successfully',
                   icon: 'success',
                   confirmButtonText: 'OK'

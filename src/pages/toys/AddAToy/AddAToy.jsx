@@ -88,7 +88,7 @@ const AddAToy = () => {
                      <label className="label">
                         <span className="label-text text-[16px] font-semibold">Sub-category</span>
                      </label>
-                     <input type="text" name="category" placeholder="Teddy Bear" required className="input input-bordered w-full" />
+                     <input type="text" name="category" placeholder="Enter sub-category" required className="input input-bordered w-full" />
                   </div>
 
                   <div className="form-control md:w-1/2">

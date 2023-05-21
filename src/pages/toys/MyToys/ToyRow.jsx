@@ -7,8 +7,6 @@ const ToyRow = ({ toyData, toy, setToy }) => {
    const { _id, sellerName, toyName, category, price, quantity } = toyData;
 
    const handleDelete = (_id) => {
-      console.log(_id);
-
       Swal.fire({
          title: 'Are you sure?',
          text: "You won't be able to revert this!",
